@@ -1,6 +1,7 @@
-from reppedBot import StandupwWebhook, test_print
+from multiprocessing import Process
+from reppedBot import StandupwWebhook, ReppedBot, initialize_commands
 
 if __name__ == '__main__':
-    test_print()
-    StandupwWebhook().send_message()
-    
+    bot = ReppedBot()
+    initialize_commands(bot)
+    bot.run(bot.discord_token)

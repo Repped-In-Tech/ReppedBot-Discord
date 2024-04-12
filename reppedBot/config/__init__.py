@@ -1,1 +1,1 @@
-from .setup import BotConfig
+from .setup import BotConfigMixin

@@ -1,1 +1,1 @@
-# ReppedBot-Discord
+# ReppedBot - A Discord bot
