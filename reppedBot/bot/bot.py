@@ -18,6 +18,8 @@ class ReppedBot(BotConfigMixin, commands.Bot, discord.Client):
         await member.dm_channel.send(
             f'Hi {member.name}, you successfully joined my test server for ReppedBot!'
         )
+        
+    
 
     async def on_command_error(self, ctx, error):
         if isinstance(error, commands.CommandNotFound):

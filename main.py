@@ -1,5 +1,4 @@
-from multiprocessing import Process
-from reppedBot import StandupwWebhook, ReppedBot, initialize_commands
+from reppedBot import ReppedBot, initialize_commands
 
 if __name__ == '__main__':
     bot = ReppedBot()
