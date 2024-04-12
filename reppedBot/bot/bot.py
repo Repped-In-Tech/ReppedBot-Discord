@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 from reppedBot import BotConfigMixin
 
-class ReppedBot(BotConfigMixin, commands.Bot, discord.Client):
+class ReppedBot(BotConfigMixin, commands.Bot):
     """
     base class to interact with Discord server. Event listeners are defined within the class, commands are defined separately. 
     """
