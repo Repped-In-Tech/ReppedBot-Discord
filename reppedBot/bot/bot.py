@@ -16,6 +16,3 @@ class ReppedBot(BotConfigMixin, commands.Bot):
     async def on_command_error(self, ctx, error):
         if isinstance(error, commands.CommandNotFound):
             await ctx.send("Command not recognized")
-
-    async def on_ready(self):
-        

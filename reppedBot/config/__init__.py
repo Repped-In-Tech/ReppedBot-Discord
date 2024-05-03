@@ -1,1 +1,1 @@
-from .setup import BotConfigMixin
+from .setup import BotConfigMixin, WebhookConfigMixin
