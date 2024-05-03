@@ -11,7 +11,7 @@ class StandupwWebhook(WebhookConfigMixin):
     def time_to_send_message(self):
         time_zone=pytz.timezone('America/Chicago')
         current_time = datetime.datetime.now(time_zone)
-        if current_time.weekday() in [0,2,4] and current_time.hour == 11 and current_time.minute == 46:
+        if current_time.weekday() in [0,2,4] and current_time.hour == 12 and current_time.minute == 00:
             return True
         return False
 

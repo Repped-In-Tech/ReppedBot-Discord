@@ -22,3 +22,4 @@ class WebhookConfigMixin:
         load_dotenv()
         self.discord_token=os.getenv('DISCORD_TOKEN')
         self.webhook_url=os.getenv('WEBHOOK_URL')
+        self.standup_message=os.getenv('STANDUP_MESSAGE')
