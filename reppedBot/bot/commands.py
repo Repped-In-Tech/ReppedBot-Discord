@@ -11,10 +11,3 @@ def initialize_commands(bot):
     async def say_my_name(ctx):
         response = f'What up {ctx.author}'
         await ctx.send(response)
-
-    @bot.command(name="getmembers")
-    async def get_members(ctx):
-        guild = bot.get_guild(bot.guild_id)
-        members = guild.members
-        member_list = [member.name for member in members]
-        await ctx.send(f"Members in the guild {guild.name}:\n{', '.join(member_list)}")

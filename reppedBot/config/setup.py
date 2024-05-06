@@ -7,7 +7,6 @@ class BotConfigMixin:
     def __init__(self):
         load_dotenv()
         self.discord_token=os.getenv('DISCORD_TOKEN')
-
         self.guild_id=os.getenv('GUILD_ID')
         self.command_prefix=os.getenv('COMMAND_PREFIX')
         intents = discord.Intents.default()

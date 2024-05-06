@@ -1,6 +1,6 @@
-import discord
 from discord.ext import commands
 from reppedBot import BotConfigMixin
+
 
 class ReppedBot(BotConfigMixin, commands.Bot):
     """
@@ -8,9 +8,12 @@ class ReppedBot(BotConfigMixin, commands.Bot):
     """
 
     async def on_member_join(self, member):
+        """
+        sends a welcome message via DM when a member joins a server
+        """
         await member.create_dm()
         await member.dm_channel.send(
-            f'Hi {member.name}, you successfully joined my test server for ReppedBot!'
+            f'Hi {member.name}, you successfully joined {member.guild.name}!'
         )
 
     async def on_command_error(self, ctx, error):
