@@ -1,6 +1,6 @@
 from discord.ext import commands
 from reppedBot import BotConfigMixin
-
+from .data import ROLE_IDS
 
 class ReppedBot(BotConfigMixin, commands.Bot):
     """
@@ -15,6 +15,7 @@ class ReppedBot(BotConfigMixin, commands.Bot):
         await member.dm_channel.send(
             f'Hi {member.name}, you successfully joined {member.guild.name}!'
         )
+    
 
     async def on_command_error(self, ctx, error):
         if isinstance(error, commands.CommandNotFound):
