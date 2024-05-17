@@ -23,6 +23,8 @@ class ReppedBot(BotConfigMixin, commands.Bot):
         sends the member id to an external api to sync info about leaving the server
         """
         requests.request(method='GET', url=self.remove_url, params={"member_id": payload.user.id}, timeout=3)
+        
+        
 
     async def on_command_error(self, ctx, error):
         if isinstance(error, commands.CommandNotFound):
