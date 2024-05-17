@@ -10,6 +10,8 @@ class BotConfigMixin:
         self.guild_id=os.getenv('GUILD_ID')
         self.command_prefix=os.getenv('COMMAND_PREFIX')
         intents = discord.Intents.default()
+        self.auth_url = os.getenv('AUTHORIZATION_URL')
+        self.remove_url = os.getenv('API_REMOVE_ENDPOINT')
         for intent in os.getenv('INTENTS').split(','):
             if hasattr(intents, intent):
                 setattr(intents, intent, True)

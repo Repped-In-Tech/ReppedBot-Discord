@@ -19,7 +19,7 @@ def initialize_commands(bot):
     async def add_superstar_role(ctx):
         author = ctx.author
         role = get(ctx.guild.roles, id=ROLE_IDS["Superstar"])
-        await author.add_roles(role, atomic=True)
+        await author.add_roles(role)
         await ctx.send("role added!")
 
     @bot.command(name="email")
