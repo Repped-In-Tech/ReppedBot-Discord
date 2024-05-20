@@ -12,6 +12,7 @@ class BotConfigMixin:
         intents = discord.Intents.default()
         self.auth_url = os.getenv('AUTHORIZATION_URL')
         self.remove_url = os.getenv('API_REMOVE_ENDPOINT')
+        self.update_url = os.getenv('API_UPDATE_ROLES_ENDPOINT')
         for intent in os.getenv('INTENTS').split(','):
             if hasattr(intents, intent):
                 setattr(intents, intent, True)

@@ -1,7 +1,8 @@
 import requests
 from discord.ext import commands
 from reppedBot import BotConfigMixin
-from .button import AuthorizeButton
+from .ui_components.button import AuthorizeButton
+from .api import remove_member_from_db, update_user_roles_in_db
 
 class ReppedBot(BotConfigMixin, commands.Bot):
     """
@@ -22,9 +23,13 @@ class ReppedBot(BotConfigMixin, commands.Bot):
         """
         sends the member id to an external api to sync info about leaving the server
         """
-        requests.request(method='GET', url=self.remove_url, params={"member_id": payload.user.id}, timeout=3)
-        
-        
+        remove_member_from_db(payload.user.id, self.remove_url)
+    
+    async def on_member_update(self, before, after):
+        """
+        sends the member id and roles to an external api for processing
+        """
+        update_user_roles_in_db(after.id, after.roles, self.update_url)
 
     async def on_command_error(self, ctx, error):
         if isinstance(error, commands.CommandNotFound):
