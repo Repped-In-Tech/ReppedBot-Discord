@@ -32,7 +32,7 @@ If you see this in your terminal, your bot is active:
 
 ![Terminal Message](https://res.cloudinary.com/dts9iifle/image/upload/v1712941707/Screen_Shot_2024-04-12_at_12.06.51_PM_bvv1fq.png)
 
-Navigate to [Justin's Test Server](https://discord.gg/mhM4RjT9) and join to see the DM and interact with the bot with commands
+Navigate to [Justin's Test Server](https://discord.gg/tHMkMbqVad)) and join to see the DM and interact with the bot with commands
 
 #### To run the webhook:
 
